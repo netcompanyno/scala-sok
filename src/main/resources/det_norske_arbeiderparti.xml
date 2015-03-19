@@ -1,0 +1,25 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="nb">
+  <page>
+    <title>Det norske Arbeiderparti</title>
+    <ns>0</ns>
+    <id>1</id>
+    <redirect title="Arbeiderpartiet" />
+    <revision>
+      <id>9343288</id>
+      <parentid>8632152</parentid>
+      <timestamp>2011-09-12T15:52:40Z</timestamp>
+      <contributor>
+        <username>Silverstein</username>
+        <id>51494</id>
+      </contributor>
+      <minor />
+      <comment>La til [[Kategori:Omdirigeringer fra eldre skriveform]] via [[WP:HOTCAT|HotCat]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve">#REDIRECT [[Arbeiderpartiet]]
+
+[[Kategori:Omdirigeringer fra eldre skriveform]]</text>
+      <sha1>4lva6yu4cqi1zuei8ermrj6ff2zeqov</sha1>
+    </revision>
+  </page>
+</mediawiki>
