@@ -2,30 +2,31 @@ object WordStemmer {
 
   val stemmingFunctions: List[Function[String, String]] = List(
     toLower,
-    upperCaseFirstLetter,
-    addComma,
-    addWorld,
-    addExclamationMark
+    replaceEndings
   )
-
-  def upperCaseFirstLetter(word: String): String = {
-    val upper: Char = word.charAt(0).toUpper
-    upper + word.substring(1, word.length)
-  }
 
   def toLower(word: String): String = word.toLowerCase
 
-  def addComma(word: String): String = {
-    word + ", "
+  def replaceEndings(word: String) = {
+    val replaceEndings = List(
+      ("mmer", "m"),
+      ("mmene", "m"),
+      ("er", ""),
+      ("ene", ""))
+
+    val ending = replaceEndings.find(t => word.endsWith(t._1))
+
+    ending match {
+      case Some((found, replace)) => {
+        var i = word.lastIndexOf(found)
+        var prefix = word.substring(0, i)
+
+        prefix + replace
+      }
+      case _ => word
+    }
   }
 
-  def addExclamationMark(word: String): String = {
-    word + "!"
-  }
-
-  def addWorld(word: String): String = {
-    word + "World"
-  }
 
   def stem(word: String): String = {
     val composedStemmerFunction: Function[String, String] = stemmingFunctions reduce (_ andThen _)
